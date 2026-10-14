@@ -1,0 +1,7 @@
+{
+  "chunker_version": "2.0",
+  "collection": "phonebook_requirements",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "knowledge_sha256": "ce72db8bb05b0e7cc91b8d0257508acb90855d6eb8b588bfa1c321f1d2207a31",
+  "manifest_version": 1
+}
