@@ -21,6 +21,7 @@ python3 -m venv .venv
 .venv/bin/python -m pytest tests/api -v  запуск api тесты
 .venv/bin/python -m pytest tests/api/test_retrieve.py -v  запуск api тесты тесты retrieve
 .venv/bin/python -m pytest tests/api/test_validation.py -v  запуск api тесты тесты validation
+.venv/bin/python -m pytest -m "not llm" запуск всех бесплатных тестов
 
 
 
@@ -38,3 +39,10 @@ python3 -m venv .venv
 .venv/bin/python -m pytest tests/api/test_validation.py -v  запуск api тесты тесты validation
 .venv/bin/python -m pytest tests/api/test_quality_validation.py -v  запуск api тесты тесты validation quality
 .venv/bin/python -m pytest tests/api/test_retrieval_golden.py -v
+.venv/bin/python -m pytest tests/api/test_ask_quality.py -v
+
+.venv/bin/python -m pytest -m "not llm"
+.venv/bin/python -m pytest -m security -v
+
+запуск отравленной версии
+KNOWLEDGE_PATH=test_data/poisoned_requirements.md CHROMA_PATH=.chroma_poisoned .venv/bin/python -m uvicorn app.main:app --port 8001
