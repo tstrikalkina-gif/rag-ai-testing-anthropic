@@ -310,7 +310,7 @@
     "id": "customer-delete-all",
     "question": "Can a customer delete all contacts?",
     "knowledge_status": "known",
-    "expected_requirement_ids": [],
+    "expected_requirement_ids": ["F16"],
     "expected_answer": "No, a customer cannot delete all contacts. only a manager can delete all contacts, using the customer token.",
     "expected_contains": ["cannot", "delete", "all"]
   },

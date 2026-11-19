@@ -23,6 +23,7 @@ dependencies = [
 ]
 
 [project.scripts]
+test = "pytest:console_main"
 rag-index = "scripts.index_knowledge_base:main"
 rag-retrieve = "scripts.show_retrieval:main"
 
@@ -39,4 +40,6 @@ markers = [
  "api: API tests against a running server (start it first with uvicorn)",
 "llm: tests that call Claude through /ask and cost money",
 "security: prompt injection, jailbreak and misuse tests (paid, call Claude)",
-"risks: bias, leakage and unsafe output tests (paid, call Claude)",]
+"risks: bias, leakage and unsafe output tests (paid, call Claude)",
+"deepeval: DeepEval metrics with an LLM judge (the most expensive tests)",
+  ]
